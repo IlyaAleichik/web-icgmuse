@@ -2,8 +2,10 @@ import { radioPlayerInit } from './radioplayer.js';
 import { videoPlayerInit } from './videoplayer.js';
 import { musikPlayerInit } from './musikplayer.js';
 
+
 const playerBtn = document.querySelectorAll('.player-btn');
 const playerBlock = document.querySelectorAll('.player-block');
+
 
 const deactivationPlayer = () => {
     playerBtn.forEach((btn) => {
@@ -26,6 +28,8 @@ playerBtn.forEach((btn, i) => {
     })
 
 })
+
+
 
 videoPlayerInit();
 

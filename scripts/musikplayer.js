@@ -9,6 +9,7 @@ export const musikPlayerInit = () => {
     const audioProgressTiming = document.querySelector('.audio-progress__timing');
     const audioTimePassed = document.querySelector('.audio-time__passed');
     const audioTimeTotal = document.querySelector('.audio-time__total');
+    const player = document.querySelector('.player');
 
     const playList = ['hello', 'flow', 'speed'];
     let trackIndex = 0;
@@ -105,4 +106,11 @@ export const musikPlayerInit = () => {
         const progress = (x / allWidth) * audioPlayer.duration;
         audioPlayer.currentTime = progress;
     })
+
+    player.addEventListener('click', () => {
+        audioPlayer.pause();
+        audio.classList.toggle('play');
+        audioButtonPlay.classList.toggle('fa-play');
+        audioButtonPlay.classList.toggle('fa-pause');
+    });
 }

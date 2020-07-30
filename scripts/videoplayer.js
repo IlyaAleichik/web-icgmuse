@@ -6,6 +6,9 @@ export const videoPlayerInit = () => {
     const videoProgress = document.querySelector('.video-progress');
     const videoTimePassed = document.querySelector('.video-time__passed');
     const videoTimeTotal = document.querySelector('.video-time__total');
+    const player = document.querySelector('.player');
+
+
 
     const toggleIcon = () => {
         if (videoPlayer.paused) {
@@ -56,4 +59,9 @@ export const videoPlayerInit = () => {
     videoButtonPlay.addEventListener('click', playVideo);
     videoButtonStop.addEventListener('click', stopVideo);
     videoProgress.addEventListener('change', changeProgress);
+
+    player.addEventListener('click', () => {
+        videoPlayer.pause();
+        toggleIcon();
+    });
 }
